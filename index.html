@@ -19,7 +19,70 @@
                 <li><a href="#">Contacts</a></li>
             </ul>
         </nav>
+        <div class="header-text">
+            <p>Web Developer</p>
+            <h1>Hi, I'm <span>Nil Marquez </span><br>from Spain</h1>
+        </div>
     </div>
 </div>
+<!--About-->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia nemo, consequuntur ad rem fugiat cumque ipsum libero, voluptates aut fugit maiores veniam nulla ratione vitae perspiciatis enim ipsam in voluptatem iusto explicabo nisi, corporis labore cupiditate a! Nostrum, aut totam dolore sapiente ullam impedit, dignissimos exercitationem sed id quae unde, omnis corporis ab maiores asperiores voluptate nam enim eum reiciendis suscipit eius? Delectus porro quis sit quidem aut labore facere minima ut nostrum deserunt expedita iure impedit iste dicta quam reiciendis pariatur in perferendis saepe, dolorum explicabo culpa incidunt mollitia id. Molestiae voluptatibus animi itaque fugiat rem quisquam illo distinctio.
+                </p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>    
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>    
+                    <p class="tab-links" onclick="opentab('education')">Education</p>    
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>WebDev</span><br>Designing Web/App Interfaces</li>
+                        <li><span>WebDev2</span><br>Designing Web/App Interfaces2</li>
+                        <li><span>WebDev3</span><br>Designing Web/App Interfaces3</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>hoy</span><br>Designing Web/App Interfaces</li>
+                        <li><span>WebDev2</span><br>Designing Web/App Interfaces2</li>
+                        <li><span>WebDev3</span><br>Designing Web/App Interfaces3</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2018</span><br>Designing Web/App Interfaces</li>
+                        <li><span>2020</span><br>Designing Web/App Interfaces2</li>
+                        <li><span>2023</span><br>Designing Web/App Interfaces3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+</script>
+
 </body>
 </html>
